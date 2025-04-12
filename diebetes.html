@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diebetes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <button class="toggle-btn">☰</button>
+    <button class="close-btn">✖</button>
+
+    <!-- SiderBar -->
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <img src="./asset/corp.jpg" alt="Clinic Logo" class="d-block rounded-circle mx-auto"
+                style="height: 100px; width: 100px;">
+            <h2 class="text-center mt-3" style="color: #229ea6;">Corp J</h2>
+            <a href="./index.html"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+            <a href="#"><i class="fas fa-calendar-check me-2"></i> New Sponsored Bookings</a>
+            <a href="#"><i class="fas fa-chart-line me-2"></i> View Reports Analytics</a>
+            <a href="#"><i class="fas fa-users me-2"></i> Camps / Webinar</a>
+            <a href="#"><i class="fas fa-heartbeat me-2"></i> Health Packages</a>
+            <a href="#"><i class="fas fa-x-ray me-2"></i> Radiology Tests</a>
+            <a href="#"><i class="fas fa-hospital me-2"></i> Corporate Clinic</a>
+            <a href="./diebetes.html"><i class="fas fa-notes-medical me-2"></i> Diabetes Management Plans</a>
+            <a href="#"><i class="fas fa-brain me-2"></i> Mental Wellness</a>
+            <a href="./special.html"><i class="fas fa-user-md me-2"></i> Speciality Consultation</a>
+            <a href="#"><i class="fas fa-sitemap me-2"></i> Manage Divisions</a>
+            <a href="#"><i class="fas fa-stethoscope me-2"></i> Manage HRA</a>
+            <a href="#"><i class="fas fa-tasks me-2"></i> Daily Activity</a>
+            <a href="#"><i class="fas fa-users-cog me-2"></i> Users List</a>
+            <a href="#"><i class="fas fa-chart-pie me-2"></i> Analytics</a>
+            <a href="#"><i class="fas fa-file-invoice-dollar me-2"></i> View Invoices</a>
+            <a href="#"><i class="fas fa-video me-2"></i> Tele Consultation</a>
+            <a href="#"><i class="fas fa-vials me-2"></i> Sponsored Lab Tests</a>
+            <a href="#"><i class="fas fa-flask me-2"></i> Sponsored Lab Packages</a>
+            <a href="#"><i class="fas fa-procedures me-2"></i> Surgery Care</a>
+            <a href="#"><i class="fas fa-ambulance me-2"></i> 24x7 Ambulance</a>
+            <a href="#"><i class="fas fa-user-md me-2"></i> Doctor Home Visit</a>
+            <a href="#"><i class="fas fa-home me-2"></i> Home Health Care</a>
+            <a href="#"><i class="fas fa-vial me-2"></i> Lab Bookings</a>
+            <a href="#"><i class="fas fa-bell me-2"></i> Notifications</a>
+            <a href="#"><i class="fas fa-question-circle me-2"></i> Query</a>
+            <a href="#"><i class="fas fa-user-nurse me-2"></i> Wellness Manager</a>
+            <a href="#"><i class="fas fa-users me-2"></i> Employee Dependents</a>
+            <a href="#"><i class="fas fa-key me-2"></i> Manage Keys</a>
+        </div>
+    </div>
+    <!-- SiderBar End-->
+
+    <div class="content" style="background-color: #eeeeee;">
+        <!-- Header -->
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center p-3"
+            style="background-color: #fff; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+
+            <!-- Logo -->
+            <div class="d-flex align-items-center">
+                <img src="./asset/insurance-logo.png" alt="Clinic Logo" class="rounded-circle mx-md-0 mx-auto"
+                    style="height: 50px; width: 150px;">
+            </div>
+
+            <!-- Welcome Message -->
+            <h6 class="my-2 my-md-0 text-md-center text-nowrap" style="color: #229ea6;">
+                Welcome to Corp J
+            </h6>
+
+            <!-- Icons Section -->
+            <div class="d-flex align-items-center gap-3">
+                <a href="#" class="text-decoration-none text-dark">
+                    <i class="fas fa-bell fa-shake"></i>
+                </a>
+                <a href="#" class="text-dark">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Header End-->
+
+        <!-- Popup -->
+        <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg"> <!-- Larger modal for better spacing -->
+                <div class="modal-content rounded-4 shadow-lg border-0"> <!-- Rounded corners & shadow -->
+                    <div class="modal-header bg-gradient text-white rounded-top-4 d-flex justify-content-between" style="background: linear-gradient(45deg, #229ea6, #0a6ebd);">
+                        <h5 class="modal-title fw-bold text-dark" id="bookingModalLabel">📅 Book Webinar / Camps / Seminar</h5>
+                        <button type="button" class="border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                <path d="M8 1a7 7 0 1 0 0 14A7 7 0 1 0 8 1zm0 13A6 6 0 1 1 8 2a6 6 0 0 1 0 12z"/>
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 1 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 1 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>                        
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Plan Name</label>
+                                    <input type="text" class="form-control bg-light rounded-3" id="eventName" readonly>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Fees</label>
+                                    <input type="text" class="form-control bg-light rounded-3" id="eventFees" readonly>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Plan Validity</label>
+                                    <input type="text" class="form-control bg-light rounded-3" id="eventValidity" readonly>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">No Of Employees</label>
+                                    <input type="number" class="form-control bg-light rounded-3">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Total Cost</label>
+                                    <input type="number" class="form-control bg-light rounded-3">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-end">
+                        <a href="#" class="btn btn-light px-4 py-2 border rounded-3 shadow-sm" data-bs-dismiss="modal">
+                            Close
+                        </a>
+                        <a href="#" class="allbtn px-4 py-2 fw-bold rounded-3 shadow-sm text-white" style="background-color: #229ea6; border: none;">
+                            Pay Now
+                        </a>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Popup End-->
+
+        <!-- Diabetes -->
+        <div class="conatiner">
+            <h3 class="fw-bold my-5">Diabetes Management Plans</h3>
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="bg-white p-3 rounded shadow-lg">
+                        <div class="card-container rounded position-relative">
+                            <img src="./asset/Diabetes/Silver.png" alt="Avatar" class="d-block w-100 rounded"
+                                height="250px" style="object-fit: cover;">
+                            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center">
+                                <div class="text-white fw-bold text-center" style="font-size: 20px;">Silver</div>
+                                <a href="#" class="p-2 px-3 rounded fw-bold text-decoration-none select-btn"
+                                    style="background-color: #fff; color: #229ea6;" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal"
+                                    data-event="Silver"
+                                    data-fees="3999" 
+                                    data-validity="3 Months">
+                                    Select
+                                </a>
+                            </div>
+                        </div>
+                        <div class="fw-bold text-center mt-2">
+                            <p>Price - <span>₹ 3999</span></p>
+                            <p>3 Months</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="bg-white p-3 rounded shadow-lg">
+                        <div class="card-container rounded position-relative">
+                            <img src="./asset/Diabetes/gold.png" alt="Avatar" class="d-block w-100 rounded"
+                                height="250px" style="object-fit: cover;">
+                            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center">
+                                <div class="text-white fw-bold text-center" style="font-size: 20px;">Gold</div>
+                                <a href="#" class="p-2 px-3 rounded fw-bold text-decoration-none select-btn"
+                                    style="background-color: #fff; color: #229ea6;" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal" data-event="Gold" data-fees="5999" data-validity="6 Months">
+                                    Select
+                                </a>
+                            </div>
+                        </div>
+                        <div class="fw-bold text-center mt-2">
+                            <p>Price - <span>₹ 5999</span></p>
+                            <p>6 Months</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="bg-white p-3 rounded shadow-lg">
+                        <div class="card-container rounded position-relative">
+                            <img src="./asset/Diabetes/platinum.png" alt="Avatar" class="d-block w-100 rounded"
+                                height="250px" style="object-fit: cover;">
+                            <div class="overlay d-flex flex-column justify-content-center align-items-center text-center">
+                                <div class="text-white fw-bold text-center" style="font-size: 20px;">Platinum</div>
+                                <a href="#" class="p-2 px-3 rounded fw-bold text-decoration-none select-btn"
+                                    style="background-color: #fff; color: #229ea6;" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal" data-event="Platinum" data-fees="7999" data-validity="9 Months">
+                                    Select
+                                </a>
+                            </div>
+                        </div>
+                        <div class="fw-bold text-center mt-2">
+                            <p>Price - <span>₹ 7999</span></p>
+                            <p>9 Months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+        <!-- Diabetes End -->
+
+        <!-- Footer -->
+        <footer class="text-center mt-4">
+            <p class="text-muted">Copyright Nizcare © 2025</p>
+        </footer>
+        <!-- Footer End -->
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.toggle-btn').click(function () {
+                $('.sidebar').css('margin-left', '0');
+                $('.toggle-btn').hide();
+                $('.close-btn').show();
+            });
+            $('.close-btn').click(function () {
+                $('.sidebar').css('margin-left', '-290px');
+                $('.toggle-btn').show();
+                $('.close-btn').hide();
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const selectButtons = document.querySelectorAll(".select-btn");
+        selectButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const eventName = this.getAttribute("data-event");
+                const eventFees = this.getAttribute("data-fees");
+                const eventValidity = this.getAttribute("data-validity");
+                document.getElementById("eventName").value = eventName;
+                document.getElementById("eventFees").value = eventFees;
+                document.getElementById("eventValidity").value = eventValidity;
+            });
+        });
+    });
+    </script>
+
+</body>
+
+</html>

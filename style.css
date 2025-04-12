@@ -1,0 +1,164 @@
+body {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 290px;
+    position: fixed;
+    gap: 10px;
+    background: #fff;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.sidebar-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.sidebar a {
+    color: #474444;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border-radius: 50px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    background: #229ea6;
+    color: #fff;
+}
+
+.content {
+    margin-left: 290px;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.3s;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.sidebar-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sidebar-content::-webkit-scrollbar {
+    height: 0;
+}
+
+.sidebar-content::-webkit-scrollbar:vertical {
+    width: 8px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar-content {
+    scrollbar-width: thin;
+}
+
+.toggle-btn,
+.close-btn {
+    position: absolute;
+    top: 15px;
+    cursor: pointer;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.toggle-btn {
+    left: 15px;
+    display: none;
+}
+
+.close-btn {
+    right: 15px;
+    display: none;
+}
+
+.hover-effect:hover {
+    color: black !important;
+    text-decoration: underline !important;
+}
+
+.allbtn:hover {
+    background-color: #333 !important;
+    transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -290px;
+    }
+
+    .content {
+        margin: 40px 0 0 0;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .close-btn {
+        display: none !important;
+    }
+}
+
+/* Image hove effect */
+.card-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 140, 186, 0.7); */
+    background-color: #229ea6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-container:hover .overlay {
+    opacity: 1;
+}
+/* Image hove effect End*/
